@@ -9,3 +9,6 @@ dataset_id = 'english-contractor-monthly-general-dental-and-orthodontic-contract
 
 [single-file]
 resource_name = 'CONTRACT_ANNUAL_201604'
+
+[time-series]
+year = '2020'
