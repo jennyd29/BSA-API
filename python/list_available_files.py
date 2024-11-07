@@ -5,7 +5,7 @@ import toml
 def list_available_files():
     
     # get variables for API call
-    with open('config.toml', 'r') as f:
+    with open('python/config.toml', 'r') as f:
         config = toml.load(f)
         
     base_endpoint = config['API-details']['base_endpoint']
@@ -24,4 +24,4 @@ def list_available_files():
     resources_table = pd.json_normalize(metadata_response['result']['resources'])
     
     # create CSV with list of available files
-    resources_table.to_csv('output/available_files.csv', index = False)
+    resources_table.to_csv('python/output/available_files.csv', index = False)

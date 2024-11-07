@@ -6,7 +6,7 @@ import toml
 def extract_file():
     
     # get variables for API call
-    with open('config.toml', 'r') as f:
+    with open('python/config.toml', 'r') as f:
         config = toml.load(f)
         
     base_endpoint = config['API-details']['base_endpoint']
@@ -37,4 +37,4 @@ def extract_file():
     df = pd.json_normalize(response['result']['result']['records'])
     
     # write csv
-    df.to_csv('output/single_table.csv', index = False)
+    df.to_csv('python/output/single_table.csv', index = False)
